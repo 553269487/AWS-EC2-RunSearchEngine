@@ -38,7 +38,7 @@ const Search = (props) => {
     let startTime = new Date().getTime();
     try {
       await axios
-        .get(`http://localhost:8000/search?query=${state}`)
+        .get(`http://54.196.196.30:8000/search?query=${state}`)
         .then((res) => {
           if (res.status === 200) {
             setResult(res.data);
