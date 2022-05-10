@@ -10,11 +10,11 @@ const Results = (props) => {
 
   return (
     <div className="show">
-      <div className="show-info">
+      {/* <div className="show-info">
         {result !== null && result !== undefined && result.length > 0
           ? `About ${result.length} results (${time} milliseconds)`
           : " "}
-      </div>
+      </div> */}
       <div>
         {result !== null && result !== undefined && result.length > 0
           ? result.map((result, index) => (
