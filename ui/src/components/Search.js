@@ -38,14 +38,14 @@ const Search = (props) => {
     let startTime = new Date().getTime();
     try {
       await axios
-        .get(`http://localhost:8000/search?query=${state}`)
+        .get(`http://0.0.0.0:8000/search?query=${state}`)
         .then((res) => {
           if (res.status === 200) {
             setResult(res.data);
             setTime(new Date().getTime() - startTime);
           } else {
             setResult([]);
-            console.log("no result!!!!!" + res.status);
+            console.log("no result!!!!!");
           }
           setLoading(false);
         });
@@ -64,14 +64,14 @@ const Search = (props) => {
       if (props.location.state) {
         try {
           await axios
-            .get(`http://localhost:8000/search?query=${state}`)
+            .get(`http://0.0.0.0:8000/search?query=${state}`)
             .then((res) => {
               if (res.status === 200) {
                 setResult(res.data);
                 setTime(new Date().getTime() - startTime);
               } else {
                 setResult([]);
-                console.log("no result!!!!!" + res.status);
+                console.log("no result!!!!!");
               }
               setLoading(false);
             });
